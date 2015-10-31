@@ -1,0 +1,232 @@
+2015-10-24 11:35:12,878 - [INFO] - from play in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-10-24 11:37:31,331 - [DEBUG] - from application in New I/O  worker #1 
+** onStart **
+
+2015-10-24 11:37:31,683 - [DEBUG] - from application in New I/O  worker #1 
+** Morphia datastore: test
+
+2015-10-24 11:37:31,845 - [INFO] - from play in New I/O  worker #1 
+Application started (Dev)
+
+2015-10-24 11:38:44,535 - [WARN] - from com.google.code.morphia.mapping.DefaultCreator in play-akka.actor.default-dispatcher-13 
+Class not found defined in dbObj: 
+java.lang.ClassNotFoundException: models.User
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366) ~[na:1.7.0_79]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355) ~[na:1.7.0_79]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.7.0_79]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) ~[na:1.7.0_79]
+	at sbt.PlayCommands$$anonfun$53$$anonfun$55$$anon$2.loadClass(PlayCommands.scala:535) ~[na:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_79]
+	at java.lang.Class.forName(Class.java:274) ~[na:1.7.0_79]
+	at com.google.code.morphia.mapping.DefaultCreator.getClass(DefaultCreator.java:84) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.DefaultCreator.createInstance(DefaultCreator.java:38) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.Mapper.fromDBObject(Mapper.java:266) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.processItem(MorphiaIterator.java:53) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.next(MorphiaIterator.java:48) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.QueryImpl.get(QueryImpl.java:344) [morphia-0.99.jar:na]
+	at models.User.findByEmail(User.java:85) [classes/:na]
+	at controllers.account.Signup.checkBeforeSave(Signup.java:100) [classes/:na]
+	at controllers.account.Signup.save(Signup.java:64) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:141) [play_2.10.jar:2.1.0]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:322) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) [play_2.10.jar:2.1.0]
+	at play.GlobalSettings$1.call(GlobalSettings.java:63) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) [play_2.10.jar:2.1.0]
+	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) [play_2.10.jar:2.1.0]
+	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:386) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:212) [akka-actor_2.10.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) [akka-actor_2.10.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [scala-library.jar:na]
+
+2015-10-24 11:38:44,536 - [WARN] - from com.google.code.morphia.mapping.DefaultCreator in play-akka.actor.default-dispatcher-11 
+Class not found defined in dbObj: 
+java.lang.ClassNotFoundException: models.User
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366) ~[na:1.7.0_79]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355) ~[na:1.7.0_79]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.7.0_79]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) ~[na:1.7.0_79]
+	at sbt.PlayCommands$$anonfun$53$$anonfun$55$$anon$2.loadClass(PlayCommands.scala:535) ~[na:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_79]
+	at java.lang.Class.forName(Class.java:274) ~[na:1.7.0_79]
+	at com.google.code.morphia.mapping.DefaultCreator.getClass(DefaultCreator.java:84) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.DefaultCreator.createInstance(DefaultCreator.java:38) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.Mapper.fromDBObject(Mapper.java:266) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.processItem(MorphiaIterator.java:53) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.next(MorphiaIterator.java:48) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.QueryImpl.get(QueryImpl.java:344) [morphia-0.99.jar:na]
+	at models.User.findByEmail(User.java:85) [classes/:na]
+	at controllers.account.Signup.checkBeforeSave(Signup.java:100) [classes/:na]
+	at controllers.account.Signup.save(Signup.java:64) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:141) [play_2.10.jar:2.1.0]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:322) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) [play_2.10.jar:2.1.0]
+	at play.GlobalSettings$1.call(GlobalSettings.java:63) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) [play_2.10.jar:2.1.0]
+	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) [play_2.10.jar:2.1.0]
+	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:386) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:212) [akka-actor_2.10.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) [akka-actor_2.10.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [scala-library.jar:na]
+
+2015-10-24 11:39:44,784 - [WARN] - from com.google.code.morphia.mapping.DefaultCreator in play-akka.actor.default-dispatcher-8 
+Class not found defined in dbObj: 
+java.lang.ClassNotFoundException: models.User
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366) ~[na:1.7.0_79]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355) ~[na:1.7.0_79]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.7.0_79]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) ~[na:1.7.0_79]
+	at sbt.PlayCommands$$anonfun$53$$anonfun$55$$anon$2.loadClass(PlayCommands.scala:535) ~[na:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_79]
+	at java.lang.Class.forName(Class.java:274) ~[na:1.7.0_79]
+	at com.google.code.morphia.mapping.DefaultCreator.getClass(DefaultCreator.java:84) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.DefaultCreator.createInstance(DefaultCreator.java:38) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.Mapper.fromDBObject(Mapper.java:266) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.processItem(MorphiaIterator.java:53) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.next(MorphiaIterator.java:48) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.QueryImpl.get(QueryImpl.java:344) [morphia-0.99.jar:na]
+	at models.User.findByEmail(User.java:85) [classes/:na]
+	at controllers.account.Signup.checkBeforeSave(Signup.java:100) [classes/:na]
+	at controllers.account.Signup.save(Signup.java:64) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:141) [play_2.10.jar:2.1.0]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:322) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) [play_2.10.jar:2.1.0]
+	at play.GlobalSettings$1.call(GlobalSettings.java:63) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) [play_2.10.jar:2.1.0]
+	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) [play_2.10.jar:2.1.0]
+	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:386) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:212) [akka-actor_2.10.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) [akka-actor_2.10.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [scala-library.jar:na]
+
+2015-10-24 11:32:30,280 - [WARN] - from com.google.code.morphia.mapping.DefaultCreator in play-akka.actor.default-dispatcher-19 
+Class not found defined in dbObj: 
+java.lang.ClassNotFoundException: models.User
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366) ~[na:1.7.0_79]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355) ~[na:1.7.0_79]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.7.0_79]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) ~[na:1.7.0_79]
+	at sbt.PlayCommands$$anonfun$53$$anonfun$55$$anon$2.loadClass(PlayCommands.scala:535) ~[na:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_79]
+	at java.lang.Class.forName(Class.java:274) ~[na:1.7.0_79]
+	at com.google.code.morphia.mapping.DefaultCreator.getClass(DefaultCreator.java:84) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.DefaultCreator.createInstance(DefaultCreator.java:38) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.Mapper.fromDBObject(Mapper.java:266) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.processItem(MorphiaIterator.java:53) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.next(MorphiaIterator.java:48) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.QueryImpl.get(QueryImpl.java:344) [morphia-0.99.jar:na]
+	at models.User.findByEmail(User.java:85) [classes/:na]
+	at controllers.account.Signup.checkBeforeSave(Signup.java:100) [classes/:na]
+	at controllers.account.Signup.save(Signup.java:64) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:141) [play_2.10.jar:2.1.0]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:322) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) [play_2.10.jar:2.1.0]
+	at play.GlobalSettings$1.call(GlobalSettings.java:63) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) [play_2.10.jar:2.1.0]
+	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) [play_2.10.jar:2.1.0]
+	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:386) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:212) [akka-actor_2.10.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) [akka-actor_2.10.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [scala-library.jar:na]
+
+2015-10-24 11:37:58,351 - [WARN] - from com.google.code.morphia.mapping.DefaultCreator in play-akka.actor.default-dispatcher-20 
+Class not found defined in dbObj: 
+java.lang.ClassNotFoundException: models.User
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:366) ~[na:1.7.0_79]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:355) ~[na:1.7.0_79]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.7.0_79]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:354) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:425) ~[na:1.7.0_79]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:358) ~[na:1.7.0_79]
+	at sbt.PlayCommands$$anonfun$53$$anonfun$55$$anon$2.loadClass(PlayCommands.scala:535) ~[na:na]
+	at java.lang.Class.forName0(Native Method) ~[na:1.7.0_79]
+	at java.lang.Class.forName(Class.java:274) ~[na:1.7.0_79]
+	at com.google.code.morphia.mapping.DefaultCreator.getClass(DefaultCreator.java:84) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.DefaultCreator.createInstance(DefaultCreator.java:38) [morphia-0.99.jar:na]
+	at com.google.code.morphia.mapping.Mapper.fromDBObject(Mapper.java:266) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.processItem(MorphiaIterator.java:53) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.MorphiaIterator.next(MorphiaIterator.java:48) [morphia-0.99.jar:na]
+	at com.google.code.morphia.query.QueryImpl.get(QueryImpl.java:344) [morphia-0.99.jar:na]
+	at models.User.findByEmail(User.java:85) [classes/:na]
+	at controllers.account.Signup.checkBeforeSave(Signup.java:100) [classes/:na]
+	at controllers.account.Signup.save(Signup.java:64) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:193) [classes/:na]
+	at play.core.Router$HandlerInvoker$$anon$6$$anon$2.invocation(Router.scala:141) [play_2.10.jar:2.1.0]
+	at play.core.Router$Routes$$anon$1.invocation(Router.scala:322) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:31) [play_2.10.jar:2.1.0]
+	at play.GlobalSettings$1.call(GlobalSettings.java:63) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:74) [play_2.10.jar:2.1.0]
+	at play.core.j.JavaAction$$anon$2.apply(JavaAction.scala:73) [play_2.10.jar:2.1.0]
+	at play.libs.F$Promise$PromiseActor.onReceive(F.java:420) [play_2.10.jar:2.1.0]
+	at akka.actor.UntypedActor$$anonfun$receive$1.applyOrElse(UntypedActor.scala:159) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:425) [akka-actor_2.10.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:386) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:230) [akka-actor_2.10.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:212) [akka-actor_2.10.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$MailboxExecutionTask.exec(AbstractDispatcher.scala:502) [akka-actor_2.10.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:262) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:975) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1478) [scala-library.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:104) [scala-library.jar:na]
+
+2015-10-24 11:47:58,266 - [DEBUG] - from application in New I/O  worker #7 
+** onStart **
+
+2015-10-24 11:47:58,270 - [DEBUG] - from application in New I/O  worker #7 
+** Morphia datastore: test1
+
+2015-10-24 11:47:58,271 - [INFO] - from play in New I/O  worker #7 
+Application started (Dev)
+
+2015-10-24 11:50:15,586 - [INFO] - from play in play-akka.actor.default-dispatcher-36 
+Starting application default Akka system.
+
+2015-10-24 11:50:17,406 - [DEBUG] - from application in application-akka.actor.default-dispatcher-2 
+Mail.sendMail: Mail will be sent to kagi@gmail.com
+
