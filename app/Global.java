@@ -6,6 +6,8 @@ import play.Logger;
 
 import com.google.code.morphia.Morphia;
 import com.mongodb.Mongo;
+import play.Application;
+import play.Play;
 import controllers.MorphiaObject;
 
 public class Global extends GlobalSettings {
@@ -15,12 +17,12 @@ public class Global extends GlobalSettings {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
 		try {
-			MorphiaObject.mongo = new Mongo(Play.application().configuration().getString("application.mongodb");
+		MorphiaObject.mongo = new Mongo(Play.application().configuration().getString("mongodb"));
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
 		MorphiaObject.morphia = new Morphia();
-		MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, "test1");
+		MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, "test");
 		MorphiaObject.datastore.ensureIndexes();   
 		MorphiaObject.datastore.ensureCaps();  
 
