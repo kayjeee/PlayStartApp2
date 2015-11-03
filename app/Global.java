@@ -14,14 +14,19 @@ import controllers.MorphiaObject;
 
 public class Global extends GlobalSettings {
 
-	@Override
+@Override
 	public void onStart(play.Application arg0) {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
+		   Configuration config = Configuration.root().getConfig("jongo");
+      
+        String mongo = config.getString("mongodb.uri");
+        String password = config.getString("mongodb.password");
 		try {
 
-		MorphiaObject.mongo = new Mongo(Play.Play.application().configuration().getString("mongodb"));
+		MorphiaObject.mongo = new Mongo(Configuration().getString("mongo"));
 
+		
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
