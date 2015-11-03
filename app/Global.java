@@ -6,11 +6,10 @@ import play.Logger;
 
 import com.google.code.morphia.Morphia;
 import com.mongodb.Mongo;
-<<<<<<< HEAD
+
 import play.Application;
 import play.Play;
-=======
->>>>>>> b18da6a30a0f15856c217d8239d4fdafaebac676
+
 import controllers.MorphiaObject;
 
 public class Global extends GlobalSettings {
@@ -20,11 +19,9 @@ public class Global extends GlobalSettings {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
 		try {
-<<<<<<< HEAD
-		MorphiaObject.mongo = new Mongo(Play.application().configuration().getString("mongodb"));
-=======
-			MorphiaObject.mongo = new Mongo(Play.application().configuration().getString("application.mongodb");
->>>>>>> b18da6a30a0f15856c217d8239d4fdafaebac676
+
+		MorphiaObject.mongo = new Mongo(Play.Play.application().configuration().getString("mongodb"));
+
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
