@@ -18,21 +18,17 @@ public class Global extends GlobalSettings {
 	public void onStart(play.Application arg0) {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
-
-		   Configuration config = Configuration.root().getConfig("jongo");
-      
-        String mongo = config.getString("mongodb.uri");
-        String password = config.getString("mongodb.password");
 		try {
-
-		MorphiaObject.mongo = new Mongo(Configuration().getString("mongo"));
-
-		
+			MorphiaObject.mongo = new Mongo("127.0.0.1", 27017);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
+		Configuration config = Configuration.root().getConfig("jongo");
+	      
+        String test = config.getString("mongodb.dbname");
+     
 		MorphiaObject.morphia = new Morphia();
-		MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, "test");
+		MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, test);
 		MorphiaObject.datastore.ensureIndexes();   
 		MorphiaObject.datastore.ensureCaps();  
 
