@@ -18,6 +18,7 @@ public class Global extends GlobalSettings {
 	public void onStart(play.Application arg0) {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
+		#use  congif
 		   Configuration config = Configuration.root().getConfig("jongo");
       
         String mongo = config.getString("mongodb.uri");
