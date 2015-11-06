@@ -9,7 +9,7 @@ import com.mongodb.Mongo;
 
 import play.Application;
 import play.Play;
-import play.Configuration;s
+import play.Configuration;
 import controllers.MorphiaObject;
 
 public class Global extends GlobalSettings {
