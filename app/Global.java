@@ -1,5 +1,6 @@
 
 
+
 import java.net.UnknownHostException;
 
 import play.GlobalSettings;
@@ -17,11 +18,17 @@ public class Global extends GlobalSettings {
 		super.beforeStart(arg0);
 		Logger.debug("** onStart **"); 
 		try {
-			MorphiaObject.mongo = new Mongo("127.0.0.1", 27017);
+			Configuration config = Configuration.root().getConfig("jongo");
+			   String port = config.getString("mongodb.port");
+			MorphiaObject.mongo = new Mongo("port");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
-			MorphiaObject.morphia = new Morphia();
+		Configuration config = Configuration.root().getConfig("jongo");
+	      
+     
+     
+		MorphiaObject.morphia = new Morphia();
 		MorphiaObject.datastore = MorphiaObject.morphia.createDatastore(MorphiaObject.mongo, "test");
 		MorphiaObject.datastore.ensureIndexes();   
 		MorphiaObject.datastore.ensureCaps();  
@@ -29,7 +36,3 @@ public class Global extends GlobalSettings {
 		Logger.debug("** Morphia datastore: " + MorphiaObject.datastore.getDB());
 	}
 }
-
-
-	      
-       
