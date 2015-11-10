@@ -17,12 +17,12 @@ public class Global extends GlobalSettings {
 		try {
 			Configuration config = Configuration.root().getConfig("jongo");
 			String host = config.getString("mongodb.host");
-			   int port = config.getInt("mongodb.port");
+		
 			   String uri =config.getString("mongodb.uri");
 			   System.out.print(port);
 			   System.out.print(uri);
 			   System.out.print(host);
-			MorphiaObject.mongo = new Mongo("bqy2ypsy7p7mn4l-mongodb.services.clever-cloud.com",port);
+			MorphiaObject.mongo = new Mongo("bqy2ypsy7p7mn4l-mongodb.services.clever-cloud.com");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
