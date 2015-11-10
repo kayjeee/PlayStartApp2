@@ -19,8 +19,13 @@ public class Global extends GlobalSettings {
 		Logger.debug("** onStart **"); 
 		try {
 			Configuration config = Configuration.root().getConfig("jongo");
-			   String port = config.getString("mongodb.port");
-			MorphiaObject.mongo = new Mongo("port");
+			String host = config.getString("mongodb.host");
+			   int port = config.getInt("mongodb.port");
+			   String uri =config.getString("mongodb.uri");
+			   System.out.print(port);
+			   System.out.print(uri);
+			   System.out.print(host);
+			MorphiaObject.mongo = new Mongo("host",port);
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
