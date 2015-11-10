@@ -22,7 +22,7 @@ public class Global extends GlobalSettings {
 			String host = config.getString("mongodb.host");
 			
 			   String uri =config.getString("mongodb.uri");
-			   System.out.print(port);
+			 
 			   System.out.print(uri);
 			   System.out.print(host);
 			MorphiaObject.mongo = new Mongo("host",27017);
