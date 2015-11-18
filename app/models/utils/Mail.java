@@ -75,7 +75,7 @@ public class Mail {
             MailerAPI email = play.Play.application().plugin(MailerPlugin.class).email();
 
             final Configuration root = Configuration.root();
-            final String mailFrom = root.getString("mail.from");
+            final String mailFrom = root.getString("smtp.from");
             email.addFrom(mailFrom);
             email.setSubject(envelop.subject);
             for (String toEmail : envelop.toEmails) {
@@ -83,7 +83,7 @@ public class Mail {
                 Logger.debug("Mail.sendMail: Mail will be sent to " + toEmail);
             }
 
-            final String mailSign = root.getString("mail.sign");
+            final String mailSign = root.getString("mail.user");
             email.send(envelop.message + "\n\n " + mailSign,
                     envelop.message + "<br><br>--<br>" + mailSign);
 
